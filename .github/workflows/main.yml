@@ -16,7 +16,7 @@ jobs:
     - name: Configurar Python
       uses: actions/setup-python@v4
       with:
-        node-version: '3.11'
+        python-version: '3.11'
 
     - name: Instalar dependências
       run: |
