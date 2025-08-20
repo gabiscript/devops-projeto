@@ -13,7 +13,7 @@ jobs:
     - name: Checkout do código
       uses: actions/checkout@v3
 
-    - name: Configurar Pyhon
+    - name: Configurar Python
       uses: actions/setup-python@v4
       with:
         node-version: '3.11'
