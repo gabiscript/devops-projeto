@@ -1,4 +1,4 @@
-name: CI Python
+name: CI Python + Terraform
 
 on: 
   push:
@@ -10,20 +10,34 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest 
     steps:
-    - name: Checkout do código
-      uses: actions/checkout@v3
+      - name: Checkout do código
+        uses: actions/checkout@v3
 
-    - name: Configurar Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
 
-    - name: Instalar dependências
-      run: |
-        python -m pip install --upgrade pip
-        pip install flask pytest
+      - name: Instalar dependências Python
+        run: |
+          python -m pip install --upgrade pip
+          pip install flask pytest
 
-    - name: Rodar testes
-      run:  |
-        pytest
+      - name: Rodar testes
+        run:  |
+          pytest
+
+      - name: Config do Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.7.7
+          
+      - name: Terraform init
+        run: terraform -chdir=infra init
+
+      - name: Terraform validate
+        run: terraform -chdir=infra validate
+
+      - name: Terraform plan
+        run: terraform -chdir=infra plan -input=false
     
