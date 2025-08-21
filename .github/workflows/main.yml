@@ -30,14 +30,11 @@ jobs:
       - name: Config do Terraform
         uses: hashicorp/setup-terraform@v2
         with:
-          terraform_version: latest
+          terraform_version: 1.12.0
           
-      - name: Terraform init
-        run: terraform -chdir=infra init
-
-      - name: Terraform validate
-        run: terraform -chdir=infra validate
-
-      - name: Terraform plan
-        run: terraform -chdir=infra plan -input=false
+      - name: Validação do Terraform
+        run: |
+          cd infra
+          terraform init
+          terraform validate
     
