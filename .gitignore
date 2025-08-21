@@ -4,3 +4,8 @@ __pycache__/
 *.pyd
 env/
 venv/
+.pytest_cache/
+infra/.terraform/
+infra/terraform.tfstate
+infra/terraform.tfstate.backup
+devops-key.pem
