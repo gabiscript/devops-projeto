@@ -38,4 +38,5 @@ Este projeto visa implementar a primeira fase do projeto de DevOps, com foco na 
    terraform validate
    terraform plan
    terraform apply
+   ```
    
