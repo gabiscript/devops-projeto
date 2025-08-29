@@ -1,3 +1,5 @@
+[![CI Fase 2 - Python + Docker + EC2](https://github.com/gabiscript/devops-projeto/actions/workflows/main.yml/badge.svg)](https://github.com/gabiscript/devops-projeto/actions/workflows/main.yml)
+
 # DevOps Fase 1 
 
 ## Descrição do Projeto
