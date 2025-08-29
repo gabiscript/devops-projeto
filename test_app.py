@@ -14,5 +14,5 @@ def test_about():
     response = app.test_client().get('/about')
     assert response.status_code == 200
     data = response.get_json()
-    assert data['project'] == "DevOps Fase 1"
+    assert data['project'] == "DevOps Fase 2"
     assert data['author'] == "Gabi"
