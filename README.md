@@ -53,5 +53,5 @@ Este projeto visa implementar a segunda fase do projeto de DevOps, com foco na c
 7. Deploy via Github Actions
    1. faça push para a branch main
    2. o workflow do Github Actions irá rodar os testes, buildar, enviar a imagem pro DockerHub, conectar na EC2 e atualizar o container
-   [![CI Fase 2 - Python + Docker + EC2](https://github.com/gabiscript/devops-projeto/actions/workflows/main.yml/badge.svg)](https://github.com/gabiscript/devops-projeto/actions/workflows/main.yml)
+[![CI Fase 2 - Python + Docker + EC2](https://github.com/gabiscript/devops-projeto/actions/workflows/main.yml/badge.svg)](https://github.com/gabiscript/devops-projeto/actions/workflows/main.yml)
 
