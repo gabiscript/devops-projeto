@@ -42,10 +42,10 @@ jobs:
 
       
       - name: Build imagem Docker
-        run: docker build -t gabiscript/devops-api:latest .
+        run: docker build -t gabrielamds/devops-api:latest .
 
       - name: Push da imagem pro DockerHub
-        run: docker push gabiscript/devops-api:latest
+        run: docker push gabrielamds/devops-api:latest
 
       - name: Deploy no servidor EC2
         uses: appleboy/ssh-action@v0.1.7
@@ -54,7 +54,7 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_KEY }}
           script: |
-            docker pull gabiscript/devops-api:latest
+            docker pull gabrielamds/devops-api:latest
             docker stop devops-api || true
             docker rm devops-api || true
-            docker run -d -p 5000:5000 --name devops-api gabiscript/devops-api:latest
+            docker run -d -p 5000:5000 --name devops-api gabrielamds/devops-api:latest
