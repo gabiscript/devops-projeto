@@ -12,7 +12,7 @@ def status():
 
 @app.route('/about', methods=['GET'])
 def about():
-    return jsonify(project="DevOps Fase 1", author="Gabi", version="1.0")
+    return jsonify(project="DevOps Fase 2", author="Gabi", version="1.0")
 
 
 if __name__ == '__main__':
