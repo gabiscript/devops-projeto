@@ -55,6 +55,6 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             docker pull gabrielamds/devops-api:latest
-            docker ps -q --filter "publish=5000" | xargs -r docker stop
-            docker ps -aq --filter "publish=5000" | xargs -r docker rm
+            docker stop devops-api || true
+            docker rm devops-api || true
             docker run -d -p 5000:5000 --name devops-api gabrielamds/devops-api:latest
