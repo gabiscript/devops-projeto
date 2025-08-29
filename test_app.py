@@ -3,7 +3,7 @@ from app import app
 def test_status():
     response = app.test_client().get('/status')
     assert response.status_code == 200
-    assert response.get_json()['status'] == "OK"
+    assert response.get_json()['status'] == "UP"
 
 def test_home():
     response = app.test_client().get('/')
