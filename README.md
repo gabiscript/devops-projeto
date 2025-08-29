@@ -37,7 +37,7 @@ Este projeto visa implementar a segunda fase do projeto de DevOps, com foco na c
    ```
    pytest
    ```
-5. Criar infraestrutura AWS (apenas na primeira configuração da infraestrutura AWS)
+5. Crie infraestrutura AWS (apenas na primeira configuração da infraestrutura AWS)
     ```
     cd infra
     terraform init
@@ -45,7 +45,7 @@ Este projeto visa implementar a segunda fase do projeto de DevOps, com foco na c
     terraform plan
     terraform apply
     ```
-6. Containerizar e rodar com Docker
+6. Containerize e rode com Docker
    ```
    docker build -t gabrielamds/devops-api:latest .
    docker run -d -p 5000:5000 --name devops-api gabrielamds/devops-api:latest
