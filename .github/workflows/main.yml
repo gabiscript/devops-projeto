@@ -59,5 +59,7 @@ jobs:
               git pull origin main
               docker pull gabrielamds/devops-api:latest
               docker pull nginx:latest
+              docker stop devops-api || true
+              docker rm devops-api || true
               docker-compose down || true
               docker-compose up -d
